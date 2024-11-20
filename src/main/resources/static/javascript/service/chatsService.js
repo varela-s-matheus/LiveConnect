@@ -2,7 +2,6 @@ import { dataChats } from '../chat.js';
 import ChatGroup from '../model/chatGroup.js';
 import * as webSocketService from './webSocketService.js';
 
-const url = 'http://localhost:8080'
 
 const chatBox = document?.getElementById("chat-messages")
 let newMessageCount = 0;
