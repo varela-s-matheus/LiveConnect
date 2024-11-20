@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/logo.svg" type="image/svg">
+    <title>LiveConnect - Messaging App</title>
+    <link rel="stylesheet" href="../css/chat.css">
+    <!--  downloaded library /include  -->
+    <link rel="stylesheet" href="/include/package/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="../css/loader.css">
+</head>
+<body>
+    <div id="wait">
+        <div id="loader">
+            <div class="loader-btn">LiveConnect</div>
+        </div>
+    </div>
+    <div class="chat-container">
+        <aside class="sidebar">
+            <header>
+                <h2>Contacts</h2>
+                <div class="sidebar-div">
+                    <button type="button" class="toggle-theme"><img src="../images/moon.svg" alt="moon image Darkmode"></button>
+                    <button type="button" class="add-chat" id="add-chat">Add</button>
+                </div>
+
+            </header>
+            <ul class="contact-list" id="contact-list">
+            </ul>
+            <footer>
+                <button type="button" id="logout"><img src="../images/logout.svg" alt="Logout"></button>
+                <button type="button" id="search-chat">Search</button>
+            </footer>
+        </aside>
+
+        <main class="chat" id="chat">
+            <header class="chat-header" id="chat-header">
+                <h2 data-openedchatid="0"></h2>
+            </header>
+
+            <div class="chat-messages" id="chat-messages">
+            </div>
+
+            <footer class="chat-footer">
+                <input type="text" placeholder="Type a message..." id="messageInput">
+                <button id="sendButton">Send</button>
+            </footer>
+        </main>
+    </div>
+    <script type="module" src="../javascript/chat.js"></script>
+    <!--  downloaded library /include  -->
+    <script src="/include/package/dist/sweetalert2.min.js"></script>
+    <!-- For the WebSocket -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.1.4/sockjs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+</body>
+
+</html>

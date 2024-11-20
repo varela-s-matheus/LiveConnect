@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./images/logo.svg" type="image/svg">
+    <title>LiveConnect Login</title>
+    <link rel="stylesheet" href="./css/login.css">
+    <link rel="stylesheet" href="./css/loader.css">
+    <link rel="stylesheet" href="/include/package/dist/sweetalert2.min.css">
+</head>
+<body>
+    <div id="wait">
+        <div id="loader">
+            <div class="loader-btn">LiveConnect</div>
+        </div>
+    </div>
+    <div class="login-container">
+        <div>    
+            <h2>Login</h2>
+            <form id="loginForm">
+                <input type="text" id="username" placeholder="Username" required><br>
+                <input type="password" id="password" placeholder="Password" required><br>
+                <div id="alert-login" style="display: none;">
+                    Username is already in use. Please check your password or choose a different username.
+                </div>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+    <script type="module" src="./javascript/login.js"></script>
+    <script src="/include/package/dist/sweetalert2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.1.4/sockjs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+</body>
+</html>
