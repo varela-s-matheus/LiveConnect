@@ -7,6 +7,7 @@ import com.LiveConnect.model.MessageType;
 import com.LiveConnect.service.ChatGroupService;
 import com.LiveConnect.service.MessageService;
 import com.LiveConnect.service.UserService;
+import com.LiveConnect.service.WordFilterService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -38,6 +39,8 @@ public class MessageController {
     @SendTo("/topic/public/{chatId}")
     public Message sendMessage(@Payload Message message, SimpMessageHeaderAccessor headerAccessor) {
         try {
+            String censoredContent = WordFilterService.censorWords(message.getContent());
+            message.setContent(censoredContent);
             message.setTimestamp(LocalDateTime.now());
             messageService.createMessage(message);
             return message;

@@ -9,7 +9,7 @@ let newMessageCount = 0;
 
 export async function login(username, password) {
     try {
-        const response = await fetch(`${url}/user/login`, {
+        const response = await fetch(`/user/login`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -40,7 +40,7 @@ export async function validateTokenSession() {
 
     if (token != '') {
         try {
-            const response = await fetch(`${url}/user/token`, {
+            const response = await fetch(`/user/token`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -69,7 +69,7 @@ export async function createChatGroup(chatGroup) {
     const token = localStorage.getItem('liveConnectToken');
 
     try {
-        const response = await fetch(`${url}/chat/createChat/${userId}`, {
+        const response = await fetch(`/chat/createChat/${userId}`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -97,7 +97,7 @@ export async function findAllChatsByUserId(userId) {
     const token = localStorage.getItem('liveConnectToken');
 
     try {
-        const response = await fetch(`${url}/chat/${userId}`, {
+        const response = await fetch(`/chat/${userId}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -150,7 +150,7 @@ export async function searchChatGroup(chatGroupName) {
     const userId = localStorage.getItem('liveConnectUserId');
 
     try {
-        const response = await fetch(`${url}/chat/search/${userId}`, {
+        const response = await fetch(`/chat/search/${userId}`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -205,7 +205,7 @@ export async function createSubscribe(dataGroup) {
     const userId = localStorage.getItem('liveConnectUserId');
 
     try {
-        const response = await fetch(`${url}/chat/subscribe/${userId}`, {
+        const response = await fetch(`/chat/subscribe/${userId}`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
