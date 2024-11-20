@@ -1,12 +1,12 @@
 # LiveConnect - WebChat
 
-## Tecnologias Utilizadas
+## Technologies Used
 This project uses the Java programming language with the SpringBoot framework and SpringData JPA for communication with the PostgreSQL database. 
 It also uses Spring Security, JWT for authentication, as well as Spring WebSocket. 
 The project proposes communication with the front-end through a REST API and WebSocket for message exchange.
 
 
-## Padrão MVC
+## MVC Pattern
 The project uses the MVC (Model-View-Controller) pattern, focusing on organization and separation of responsibilities.
 
 
