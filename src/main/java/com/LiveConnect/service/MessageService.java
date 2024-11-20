@@ -20,8 +20,6 @@ public class MessageService {
     @Autowired
     private ChatGroupRepository chatGroupRepository;
 
-    @Autowired
-    private ChatService chatService;
 
     @Autowired
     private UserService userService;
