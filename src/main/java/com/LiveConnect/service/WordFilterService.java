@@ -12,7 +12,7 @@ public class WordFilterService {
 
     public static String censorWords(String content) {
         for (String word : censuredWords) {
-            content = content.replaceAll("(?i)" + word, "****"); // Substitui as palavras por asteriscos, ignorando maiúsculas/minúsculas
+            content = content.replaceAll("(?i)" + word, "****");
         }
         return content;
     }

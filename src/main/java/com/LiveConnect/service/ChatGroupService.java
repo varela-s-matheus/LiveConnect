@@ -19,7 +19,7 @@ public class ChatGroupService {
     @Autowired
     private ChatGroupParticipantRepository chatGroupParticipantRepository;
 
-    // Ok
+
     public List<ChatGroup> findAllChatGroupByUserId(int userId) {
         return chatGroupRepository.findAllChatGroupByUserId(userId);
     }
@@ -28,7 +28,7 @@ public class ChatGroupService {
         return chatGroupRepository.findAllByIdAndName(userId, name);
     }
 
-    // Ok
+
     public Optional<ChatGroup> findChatGroupById(Integer id) {
         Optional<ChatGroup> chatGroup = chatGroupRepository.findById(id);
 
@@ -38,7 +38,7 @@ public class ChatGroupService {
         return null;
     }
 
-    // Ok
+
     public Optional<ChatGroup> findChatGroupByChatGroupId(int chatGroupId) {
         return chatGroupRepository.findById(chatGroupId);
     }
@@ -50,7 +50,7 @@ public class ChatGroupService {
         return group;
     }
 
-    // Ok
+
     public ChatGroup update(Integer id, ChatGroup chatGroup) {
         if (!chatGroupRepository.existsById(id)) {
             return null;
@@ -60,7 +60,7 @@ public class ChatGroupService {
         return chatGroupRepository.save(chatGroup);
     }
 
-    // OK
+
     public boolean deleteById(int id) {
         if (!chatGroupRepository.existsById(id)) {
             return false;

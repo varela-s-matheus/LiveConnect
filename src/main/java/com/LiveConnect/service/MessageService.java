@@ -24,29 +24,29 @@ public class MessageService {
     @Autowired
     private UserService userService;
 
-    // Ok
+
     public List<Message> findAllByChatIdAndContent(int chatId, String content) {
         return messageRepository.findAllByChatGroupIdAndContentIgnoreCase(chatId, content);
     }
 
-    // Ok
+
     public Optional<Message> findMessageById(Integer id) {
         Optional<Message> message = messageRepository.findById(id);
 
         return message;
     }
 
-    // Ok
+
     public List<MessagePaginationDTO> findAllMessagesByUserIdAndChatIdAndOffset(int userId, MessagePaginationDTOImp paginationDTO) {
         return messageRepository.findAllMessagesByUserIdAndChatIdAndOffset(userId, paginationDTO.getChatGroupId(), paginationDTO.getOffset());
     }
 
-    // Ok
+
     public Message createMessage(Message message) {
         return messageRepository.saveAndFlush(message);
     }
 
-    // Ok
+
     public Message update(Integer id, Message message) {
         if (!messageRepository.existsById(id)) {
             return null;
@@ -56,7 +56,7 @@ public class MessageService {
         return messageRepository.save(message);
     }
 
-    // OK
+
     public boolean deleteById(int id) {
         if (!messageRepository.existsById(id)) {
             return false;

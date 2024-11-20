@@ -11,9 +11,7 @@ import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
 import java.util.Optional;
-//import org.springframework.web.bind.annotation.RestController;
 
-//@SecurityRequirement(name = "bearer-key")
 @CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/chat")
@@ -59,50 +57,3 @@ public class ChatGroupController {
     }
 
 }
-
-// Funcionando...
-//    @Autowired
-//    private MessageService messageService;
-//
-//    @Autowired
-//    private UserService userService;
-//
-//    @MessageMapping("/chat.sendMessage")
-//    @SendTo("/topic/public")
-//    public Message sendMessage(@Payload Message message) {
-//        try {
-//            message.setTimestamp(LocalDateTime.now());
-//            messageService.sendMessage(message.getReceiverUserId(), message);
-//            return message;
-//        } catch(RuntimeException e) {
-//            throw new ResponseStatusException(HttpStatus.NOT_FOUND, e.getMessage());
-//        }
-//    }
-//
-//    @MessageMapping("/chat.addUser")
-//    @SendTo("/topic/public")
-//    public Message addUser(
-//            @Payload Message message,
-//            SimpMessageHeaderAccessor headerAccessor
-//    ) {
-//        headerAccessor.getSessionAttributes().put("username", userService.findUserById(message.getSenderUserId()).get().getUsername());
-//        return message;
-//    }
-
-
-//    @MessageMapping("/sendGroupMessage")
-//    @SendTo("/topic/group/{chatGroupId}")
-//    public Message sendGroupMessage(@Payload Message message) {
-//        try {
-//            message.setTimestamp(LocalDateTime.now());
-//
-//            if (message.getChatGroupId() == 0) {
-//                throw new RuntimeException("Grupo não encontrado");
-//            }
-//
-//            messageService.sendGroupMessage(message);
-//            return message;
-//        } catch (RuntimeException e) {
-//            throw new ResponseStatusException(HttpStatus.NOT_FOUND, e.getMessage());
-//        }
-//    }
