@@ -116,7 +116,7 @@ function listContacts(datachats, type) {
     chat.addEventListener("click", async function () {
 
       if (chat.getAttribute('data-offset') > 0) return;
-
+      
       loaderOn();
       const notification = document.querySelector(`[data-notificationchatid="${chat.dataset.id}"]`);
       chatBox.innerHTML = '';
@@ -146,7 +146,7 @@ function listContacts(datachats, type) {
       notification.textContent = 0;
       notification.classList.replace("opened-notification", "notification");
       loaderOff();
-
+      document.getElementById('menu-toggle').checked = false;
     });
   });
 }

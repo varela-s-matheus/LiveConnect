@@ -18,14 +18,20 @@
         </div>
     </div>
     <div class="chat-container">
-        <aside class="sidebar">
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="hamburger" id="menu-init">
+            <div></div>
+            <div></div>
+            <div></div>
+        </label>
+
+        <aside class="sidebar" id="sidebar">
             <header>
                 <h2>Contacts</h2>
                 <div class="sidebar-div">
                     <button type="button" class="toggle-theme"><img src="../images/moon.svg" alt="moon image Darkmode"></button>
                     <button type="button" class="add-chat" id="add-chat">Add</button>
                 </div>
-
             </header>
             <ul class="contact-list" id="contact-list">
             </ul>
