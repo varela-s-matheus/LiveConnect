@@ -155,6 +155,7 @@ function listContacts(datachats, type) {
 
 const addchat = document?.getElementById("add-chat")?.addEventListener("click", function () {
   debugger;
+  document.getElementById('menu-toggle').checked = false;
   Swal.fire({
     title: "Create a Group",
     html: `
@@ -198,6 +199,7 @@ const addchat = document?.getElementById("add-chat")?.addEventListener("click", 
 
 document?.getElementById("search-chat")?.addEventListener("click", function () {
   debugger;
+  document.getElementById('menu-toggle').checked = false;
   Swal.fire({
     title: "Find a Group",
     html: `

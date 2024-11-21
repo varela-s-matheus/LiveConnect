@@ -41,6 +41,7 @@ body {
     background-color: #1f2a38;
     text-align: center;
     justify-content: space-between;
+    align-items: center;
 }
 
 #logout {
@@ -332,10 +333,10 @@ input[type="checkbox"]:checked + #menu-init + .sidebar + .back-menu {
 
 @media (max-width: 768px) {
     .sidebar {
-        width: 60%;
+        width: 75%;
         position: absolute;
         top: 0;
-        left: -60%;
+        left: -75%;
         transition: left 0.3s ease;
         z-index: 9999;
     }
@@ -367,7 +368,7 @@ input[type="checkbox"]:checked + #menu-init + .sidebar + .back-menu {
     .sidebar {
         position: absolute;
         top: 0;
-        left: -60%;
+        left: -75%;
     }
 
     input[type="checkbox"]:checked + #menu-init + .sidebar {
