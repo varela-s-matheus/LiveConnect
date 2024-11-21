@@ -5,6 +5,8 @@ This project uses the Java programming language with the SpringBoot framework an
 It also uses Spring Security, JWT for authentication, as well as Spring WebSocket. 
 The project proposes communication with the front-end through a REST API and WebSocket for message exchange.
 
+<strong>Here is the application link: https://liveconnect-jdid.onrender.com/index.html. The initial loading may take a little longer due to the hosting platform, which, due to inactivity, keeps the application 'shut down'.</strong>
+
 
 ## MVC Pattern
 The project uses the MVC (Model-View-Controller) pattern, focusing on organization and separation of responsibilities.
